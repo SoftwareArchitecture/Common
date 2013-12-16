@@ -26,5 +26,5 @@ public class NewEmptyJUnitTest extends TestCase {
         super.tearDown();
     }
     // TODO add test methods here. The name must begin with 'test'. For example:
-    // public void testHello() {}
+     public void testHello() {}
 }
