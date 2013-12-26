@@ -12,8 +12,15 @@ public abstract class AbstractPeerCommand implements Serializable{
 	 *
 	 */
 	public enum Type{
+		//used when Server sends to the Peer the superPeer ID
 		SET_SUPER_PEER,
+		//used for searching for a fingerprint
 		SEARCH_FINGERPRINT,
+		
+		//used when a Peer requests to a super Peer to join the ring
+		JOIN_RING,
+		
+		//used in Peer2Peer leader election
 		UPDATE_SUPER_PEER;
 	}
 
