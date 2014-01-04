@@ -1,5 +1,6 @@
 package at.ac.tuwien.softwarearchitecture.swazam.common.infos;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "ClientInfo")
-public class ClientInfo {
+public class ClientInfo implements Serializable{
 	@XmlAttribute(name = "UUID", required = true)
 	private UUID clientID;
 
