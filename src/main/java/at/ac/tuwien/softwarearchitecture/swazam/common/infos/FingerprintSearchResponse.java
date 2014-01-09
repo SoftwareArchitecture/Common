@@ -19,15 +19,15 @@ public class FingerprintSearchResponse implements Serializable{
 	@XmlElement(name = "PeerInfo", required = true)
 	private PeerInfo peerInfo;
 	
-	@XmlElement(name = "Fingerprint", required = true)
-	private Fingerprint fingerprint;
+	@XmlElement(name = "MusicFileInfo", required = true)
+	private MusicFileInfo musicFileInfo;
 	
 	
-	public FingerprintSearchResponse(ClientInfo clientInfo, PeerInfo peerInfo, Fingerprint fingerprint) {
+	public FingerprintSearchResponse(ClientInfo clientInfo, PeerInfo peerInfo, MusicFileInfo musicFileInfo) {
 		super();
 		this.clientInfo = clientInfo;
 		this.peerInfo = peerInfo;
-		this.fingerprint = fingerprint;
+		this.musicFileInfo = musicFileInfo;
 	}
 	
 	public FingerprintSearchResponse() {
@@ -39,16 +39,16 @@ public class FingerprintSearchResponse implements Serializable{
 		return clientInfo;
 	}
 	 
-	public Fingerprint getFingerprint() {
-		return fingerprint;
+	public MusicFileInfo getFingerprint() {
+		return musicFileInfo;
 	}
  
 	public void setClientInfo(ClientInfo clientInfo) {
 		this.clientInfo = clientInfo;
 	}
 
-	public void setFingerprint(Fingerprint fingerprint) {
-		this.fingerprint = fingerprint;
+	public void setFingerprint(MusicFileInfo fingerprint) {
+		this.musicFileInfo = musicFileInfo;
 	}
 
 	public PeerInfo getPeerInfo() {
