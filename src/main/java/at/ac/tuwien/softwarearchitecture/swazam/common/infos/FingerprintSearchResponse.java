@@ -47,7 +47,7 @@ public class FingerprintSearchResponse implements Serializable{
 		this.clientInfo = clientInfo;
 	}
 
-	public void setFingerprint(MusicFileInfo fingerprint) {
+	public void setFingerprint(MusicFileInfo musicFileInfo) {
 		this.musicFileInfo = musicFileInfo;
 	}
 
