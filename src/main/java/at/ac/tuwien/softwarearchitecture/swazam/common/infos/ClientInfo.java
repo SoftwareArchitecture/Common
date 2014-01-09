@@ -15,14 +15,26 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "ClientInfo")
 public class ClientInfo implements Serializable{
-	@XmlAttribute(name = "UUID", required = true)
-	private UUID clientID;
+	@XmlAttribute(name = "id", required = true)
+	private int clientID;
+	
+	@XmlAttribute(name = "sessionkey", required = true)
+	private UUID sessionKey;
+	
 
-	public UUID getClientID() {
+	public UUID getSessionKey() {
+		return sessionKey;
+	}
+
+	public void setSessionKey(UUID sessionKey) {
+		this.sessionKey = sessionKey;
+	}
+
+	public int getClientID() {
 		return clientID;
 	}
 
-	public void setClientID(UUID clientID) {
+	public void setClientID(int clientID) {
 		this.clientID = clientID;
 	}
 	
