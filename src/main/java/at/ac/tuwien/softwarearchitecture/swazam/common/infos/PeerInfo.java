@@ -1,8 +1,6 @@
 package at.ac.tuwien.softwarearchitecture.swazam.common.infos;
 
 import java.io.Serializable;
-import java.util.UUID;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -22,7 +20,7 @@ public class PeerInfo implements Serializable{
 	 */
 
     @XmlAttribute(name = "UUID", required = true)
-	private UUID peerID;
+	private int peerID;
 	
 	/*
 	 * IP at which Peer is located
@@ -40,18 +38,18 @@ public class PeerInfo implements Serializable{
 		super();
 	}
 
-	public PeerInfo(UUID peerID, String ip, int port) {
+	public PeerInfo(int peerID, String ip, int port) {
 		super();
 		this.peerID = peerID;
 		this.ip = ip;
 		this.port = port;
 	}
 
-	public UUID getPeerID() {
+	public int getPeerID() {
 		return peerID;
 	}
 
-	public void setPeerID(UUID peerID) {
+	public void setPeerID(int peerID) {
 		this.peerID = peerID;
 	}
 
