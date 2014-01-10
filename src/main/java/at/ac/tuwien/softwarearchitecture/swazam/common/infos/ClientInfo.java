@@ -18,8 +18,14 @@ public class ClientInfo implements Serializable{
 	@XmlAttribute(name = "id", required = true)
 	private int clientID;
 	
-	@XmlAttribute(name = "sessionkey", required = true)
+	@XmlAttribute(name = "sessionkey")
 	private UUID sessionKey;
+	
+	@XmlAttribute(name = "username")
+	private String username;
+	
+	@XmlAttribute(name = "password")
+	private String password;
 	
 
 	public UUID getSessionKey() {
