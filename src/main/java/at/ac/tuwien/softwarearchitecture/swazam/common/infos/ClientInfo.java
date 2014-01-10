@@ -19,7 +19,7 @@ public class ClientInfo implements Serializable{
 	private int clientID;
 	
 	@XmlAttribute(name = "sessionkey")
-	private UUID sessionKey;
+	private String sessionKey;
 	
 	@XmlAttribute(name = "username")
 	private String username;
@@ -44,11 +44,11 @@ public class ClientInfo implements Serializable{
 		this.password = password;
 	}
 
-	public UUID getSessionKey() {
+	public String getSessionKey() {
 		return sessionKey;
 	}
 
-	public void setSessionKey(UUID sessionKey) {
+	public void setSessionKey(String sessionKey) {
 		this.sessionKey = sessionKey;
 	}
 
