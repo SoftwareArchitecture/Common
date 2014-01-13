@@ -20,7 +20,7 @@ public class PeerInfo implements Serializable{
 	 */
 
     @XmlAttribute(name = "UUID", required = true)
-	private int peerID;
+	private Integer peerID;
 	
 	/*
 	 * IP at which Peer is located
@@ -60,18 +60,19 @@ public class PeerInfo implements Serializable{
 		super();
 	}
 
-	public PeerInfo(int peerID, String ip, int port) {
+	public PeerInfo(Integer peerID, String ip, int port) {
 		super();
 		this.peerID = peerID;
 		this.ip = ip;
 		this.port = port;
 	}
 
-	public int getPeerID() {
+
+	public Integer getPeerID() {
 		return peerID;
 	}
 
-	public void setPeerID(int peerID) {
+	public void setPeerID(Integer peerID) {
 		this.peerID = peerID;
 	}
 
