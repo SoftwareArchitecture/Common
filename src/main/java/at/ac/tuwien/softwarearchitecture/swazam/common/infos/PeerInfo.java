@@ -19,7 +19,7 @@ public class PeerInfo implements Serializable{
 	 * Unique Peer ID
 	 */
 
-    @XmlAttribute(name = "UUID", required = true)
+    @XmlAttribute(name = "id", required = true)
 	private Integer peerID;
 	
 	/*
