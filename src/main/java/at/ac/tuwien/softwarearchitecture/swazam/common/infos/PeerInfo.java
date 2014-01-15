@@ -21,12 +21,18 @@ public class PeerInfo implements Serializable{
 
     @XmlAttribute(name = "id", required = true)
 	private Integer peerID;
+    
+    @XmlAttribute(name = "superPeerId")
+	private Integer superPeerID;
 	
 	/*
 	 * IP at which Peer is located
 	 */
     @XmlAttribute(name = "ip", required = true)
 	private String ip;
+    
+    @XmlAttribute(name = "superPeerIp")
+   	private String superPeerIp;
 	
 	/*
 	 * Port at which Peer Socket API listens
@@ -34,6 +40,12 @@ public class PeerInfo implements Serializable{
     @XmlAttribute(name = "port", required = true)
 	private int port;
     
+    /*
+	 * Port at which Peer Socket API listens
+	 */
+    @XmlAttribute(name = "superPeerPort")
+	private int superPeerPort;
+     
 	@XmlAttribute(name = "username")
 	private String username;
 	
@@ -50,6 +62,30 @@ public class PeerInfo implements Serializable{
 
 	public String getPassword() {
 		return password;
+	}
+
+	public Integer getSuperPeerID() {
+		return superPeerID;
+	}
+
+	public String getSuperPeerIp() {
+		return superPeerIp;
+	}
+
+	public int getSuperPeerPort() {
+		return superPeerPort;
+	}
+
+	public void setSuperPeerID(Integer superPeerID) {
+		this.superPeerID = superPeerID;
+	}
+
+	public void setSuperPeerIp(String superPeerIp) {
+		this.superPeerIp = superPeerIp;
+	}
+
+	public void setSuperPeerPort(int superPeerPort) {
+		this.superPeerPort = superPeerPort;
 	}
 
 	public void setPassword(String password) {
