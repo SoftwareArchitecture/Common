@@ -41,6 +41,10 @@ public class PeerFingerprintInformation implements Serializable{
 		this.fingerprints = fingerprints;
 	}
 
+	public void setPeerInfo(PeerInfo peerInfo) {
+		this.peerInfo = peerInfo;
+	}
+
 	public PeerFingerprintInformation(PeerInfo peerInfo, Collection<Fingerprint> fingerprints) {
 		super();
 		this.peerInfo = peerInfo;
