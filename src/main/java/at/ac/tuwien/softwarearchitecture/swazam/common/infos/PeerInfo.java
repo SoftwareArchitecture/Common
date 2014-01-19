@@ -7,125 +7,149 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * 
- * Info that can be used to fully describe a Peer and connect to it from another Peer,
- * such as to forward a fingerprint matching request.
+ *
+ * Info that can be used to fully describe a Peer and connect to it from another
+ * Peer, such as to forward a fingerprint matching request.
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "PeerInfo")
-public class PeerInfo implements Serializable{
-	/**
-	 * Unique Peer ID
-	 */
+public class PeerInfo implements Serializable {
+
+    /**
+     * Unique Peer ID
+     */
 
     @XmlAttribute(name = "id", required = true)
-	private Integer peerID;
-    
+    private Integer peerID;
+
     @XmlAttribute(name = "superPeerId")
-	private Integer superPeerID;
-	
-	/*
-	 * IP at which Peer is located
-	 */
-    @XmlAttribute(name = "ip", required = true)
-	private String ip;
-    
-    @XmlAttribute(name = "superPeerIp")
-   	private String superPeerIp;
-	
-	/*
-	 * Port at which Peer Socket API listens
-	 */
-    @XmlAttribute(name = "port", required = true)
-	private int port;
-    
+    private Integer superPeerID;
+
     /*
-	 * Port at which Peer Socket API listens
-	 */
+     * IP at which Peer is located
+     */
+    @XmlAttribute(name = "ip", required = true)
+    private String ip;
+
+    @XmlAttribute(name = "superPeerIp")
+    private String superPeerIp;
+
+    /*
+     * Port at which Peer Socket API listens
+     */
+    @XmlAttribute(name = "port", required = true)
+    private int port;
+
+    /*
+     * Port at which Peer Socket API listens
+     */
     @XmlAttribute(name = "superPeerPort")
-	private int superPeerPort;
-     
-	@XmlAttribute(name = "username")
-	private String username;
-	
-	@XmlAttribute(name = "password")
-	private String password;
+    private int superPeerPort;
 
-	public String getUsername() {
-		return username;
-	}
+    @XmlAttribute(name = "username")
+    private String username;
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    @XmlAttribute(name = "password")
+    private String password;
 
-	public String getPassword() {
-		return password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public Integer getSuperPeerID() {
-		return superPeerID;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public String getSuperPeerIp() {
-		return superPeerIp;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public int getSuperPeerPort() {
-		return superPeerPort;
-	}
+    public Integer getSuperPeerID() {
+        return superPeerID;
+    }
 
-	public void setSuperPeerID(Integer superPeerID) {
-		this.superPeerID = superPeerID;
-	}
+    public String getSuperPeerIp() {
+        return superPeerIp;
+    }
 
-	public void setSuperPeerIp(String superPeerIp) {
-		this.superPeerIp = superPeerIp;
-	}
+    public int getSuperPeerPort() {
+        return superPeerPort;
+    }
 
-	public void setSuperPeerPort(int superPeerPort) {
-		this.superPeerPort = superPeerPort;
-	}
+    public void setSuperPeerID(Integer superPeerID) {
+        this.superPeerID = superPeerID;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setSuperPeerIp(String superPeerIp) {
+        this.superPeerIp = superPeerIp;
+    }
 
-	public PeerInfo() {
-		super();
-	}
+    public void setSuperPeerPort(int superPeerPort) {
+        this.superPeerPort = superPeerPort;
+    }
 
-	public PeerInfo(Integer peerID, String ip, int port) {
-		super();
-		this.peerID = peerID;
-		this.ip = ip;
-		this.port = port;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public PeerInfo() {
+        super();
+    }
 
-	public Integer getPeerID() {
-		return peerID;
-	}
+    public PeerInfo(Integer peerID, String ip, int port) {
+        super();
+        this.peerID = peerID;
+        this.ip = ip;
+        this.port = port;
+    }
 
-	public void setPeerID(Integer peerID) {
-		this.peerID = peerID;
-	}
+    public Integer getPeerID() {
+        return peerID;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public void setPeerID(Integer peerID) {
+        this.peerID = peerID;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public String getIp() {
+        return ip;
+    }
 
-	public int getPort() {
-		return port;
-	}
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
-	public void setPort(int port) {
-		this.port = port;
-	}
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + (this.peerID != null ? this.peerID.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PeerInfo other = (PeerInfo) obj;
+        if (this.peerID != other.peerID && (this.peerID == null || !this.peerID.equals(other.peerID))) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
 }
